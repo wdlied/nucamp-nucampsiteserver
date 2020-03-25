@@ -13,3 +13,8 @@ npm i is shorthand for npm install
 ```
 npm i express-session@1.17.0 session-file-store@1.4.0
 ```
+
+# Exercise: User Authentication with Passport
+```
+npm i passport@0.4.1 passport-local@1.0.0 passport-local-mongoose@6.0.1
+```
