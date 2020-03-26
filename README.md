@@ -18,3 +18,8 @@ npm i express-session@1.17.0 session-file-store@1.4.0
 ```
 npm i passport@0.4.1 passport-local@1.0.0 passport-local-mongoose@6.0.1
 ```
+
+# Exercise: User Authentication with Passport and JSON Web Token
+```
+npm i passport-jwt@4.0.0 jsonwebtoken@8.5.1
+```
