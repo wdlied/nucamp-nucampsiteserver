@@ -6,8 +6,21 @@ const authenticate = require('../authenticate');
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.route('/')
+.get([authenticate.verifyUser, authenticate.verifyAdmin], (req, res, next) => {
+  User.find()
+  .then(users => {
+    if (users) {
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.json(users);
+    } else {
+      err = new Error(`Users not found`);
+      err.status = 404;
+      return next(err);
+    }
+  })
+  .catch(err => next(err));   
 });
 
 router.post('/signup', (req, res) => {
@@ -43,6 +56,7 @@ router.post('/signup', (req, res) => {
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
   const token = authenticate.getToken({_id: req.user._id});
+  //console.log("am i an admin: " + authenticate.verifyAdmin(req));
   res.statusCode = 200;
   res.setHeader('Conent-Type', 'application/json');
   res.json({success: true, token: token, status: 'You are successfully logged in!'});
