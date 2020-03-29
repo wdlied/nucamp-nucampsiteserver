@@ -23,3 +23,8 @@ npm i passport@0.4.1 passport-local@1.0.0 passport-local-mongoose@6.0.1
 ```
 npm i passport-jwt@4.0.0 jsonwebtoken@8.5.1
 ```
+
+# Mongo setup Admin User
+```
+db.users.update({"username": "admin"}, {$set: {"admin": true}});
+```
