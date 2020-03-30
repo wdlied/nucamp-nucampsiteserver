@@ -28,3 +28,8 @@ npm i passport-jwt@4.0.0 jsonwebtoken@8.5.1
 ```
 db.users.update({"username": "admin"}, {$set: {"admin": true}});
 ```
+
+# Exercise: Uploading Files
+```
+npm install multer@1.4.2
+```
