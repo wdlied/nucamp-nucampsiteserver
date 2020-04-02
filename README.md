@@ -38,3 +38,8 @@ npm install multer@1.4.2
 ```
 npm install cors@2.8.5
 ```
+
+# Exercise: Using OAuth with Passport and Facebook
+```
+npm i passport-facebook-token@3.3.0
+```
