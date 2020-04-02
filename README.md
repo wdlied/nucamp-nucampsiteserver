@@ -33,3 +33,8 @@ db.users.update({"username": "admin"}, {$set: {"admin": true}});
 ```
 npm install multer@1.4.2
 ```
+
+# Exercise: Cross Origin Resource Sharing
+```
+npm install cors@2.8.5
+```
