@@ -43,3 +43,10 @@ npm install cors@2.8.5
 ```
 npm i passport-facebook-token@3.3.0
 ```
+
+# Database Commands
+```
+db.favorites.find( {_id: ObjectId("5e889c981c8bb6f613e4c09a")}).pretty();
+db.favorites.remove( {_id: ObjectId("5e889c981c8bb6f613e4c09a")})
+
+```
